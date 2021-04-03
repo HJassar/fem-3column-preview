@@ -1,12 +1,3 @@
-<style>
-  h2,h3{
-    margin-top:1em;
-    font-weight:700;
-  }
-  h2 + h3 {
-    margin-top:0em;
-  }
-</style>
 # Frontend Mentor - 3-column preview card component solution
 
 This is a solution to the [3-column preview card component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/3column-preview-card-component-pH92eAR2-). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
@@ -122,7 +113,6 @@ For the canvas elements, I used [Instant Eyedropper](http://instant-eyedropper.c
 ### Useful resources
 
 - [Changing image size in markdown](https://stackoverflow.com/questions/14675913/changing-image-size-in-markdown) - This was helpful for exactly that 😀.
-- [Select first occuring element after another element in css](https://stackoverflow.com/questions/4623328/select-first-occurring-element-after-another-element) - This is for the README file as well, h3 after h2 does not need a margin above it.
 - [lineCap](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineCap) and [lineJoin](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/lineJoin) - Useful for the Canvas lines in the Background to give them the "round" feel.
 - 🔌 Plugging [another video of mine](https://www.youtube.com/watch?v=t1xFzqxYS4g), sorry 😅 - I used the same approach to create multiple rows of *beads* in the background using [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals). This keeps the HTML file clean and allows you to create as many rows as you need simply changing one line (`const numOfBeads = 6`).
 
