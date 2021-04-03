@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+:root {
+    /* colors */
+    /* Transparent white (paragraphs) */
+    --twhite: hsla(0, 0%, 100%, 0.75);
+    /* Very light gray (background, headings, buttons): */
+    --vlg: hsl(0, 0%, 95%);
+    --padding: 3em;
+    /****************************
+    Cards per column, for desktop only [min:1-max:4]
+    ****************************/
+    --cpc: 3;
+}
+
+body {
+    background-color: var(--vlg);
+    font-size: 15px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0;
+    position: relative;
+}
+
+#wrapper {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.outer-container {
+    width: calc( 80% - var(--padding));
+    max-width: 1080px;
+    min-height: 50vmin;
+    height: fit-content;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: var(--padding);
+    background-color: var(--vlg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    min-width: calc( 200px - var(--padding));
+    width: calc( 100% / var(--cpc) - var(--padding)*2);
+    padding: var(--padding);
+    flex-grow: 1;
+}
+
+.card:nth-child(3n+1) {
+    background: hsl(31, 77%, 52%);
+}
+
+.card:nth-child(3n+2) {
+    background: hsl(184, 100%, 22%);
+}
+
+.card:nth-child(3n+3) {
+    background: hsl(179, 100%, 13%);
+}
+
+.card__header {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3em;
+    color: var(--vlg);
+    text-transform: uppercase;
+}
+
+.card__paragraph {
+    color: var(--twhite)
+}
+
+.card__button {
+    display: block;
+    width: fit-content;
+    background: var(--vlg);
+    padding: 1em 2em;
+    margin: 3em 0 1em;
+    border-radius: 25px;
+    border: solid 2px var(--vlg);
+    text-decoration: none;
+}
+
+.card:nth-child(3n+1) .card__button {
+    color: hsl(31, 77%, 52%)
+}
+
+.card:nth-child(3n+2) .card__button {
+    color: hsl(184, 100%, 22%)
+}
+
+.card:nth-child(3n+3) .card__button {
+    color: hsl(179, 100%, 13%)
+}
+
+.card__button:active {
+    background: none;
+    color: var(--vlg) !important;
+}
+
+/* decorations */
+
+#docoration-beads {
+    position: fixed;
+    top: 33%;
+    left: 0;
+    height: 50px;
+    width: 50px;
+    z-index: -1;
+}
+
+.bead__row {
+    display: flex;
+}
+
+.bead {
+    width: 15px;
+    height: 15px;
+    background: #6ABED1;
+    border-radius: 50%;
+    margin: 2px;
+}
+
+/* Canvas */
+
+#canvas {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+/* Attribution */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    margin: 1em auto;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*  Mobile: 375px || Desktop: 1440px */
+
+@media screen and (max-width: 375px) {
+    .card {
+        flex-basis: 100%;
+    }
+    #wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    .outer-container {
+        width: calc(100% - var(--padding));
+        margin-top: 0px;
+        padding: calc(var(--padding)/2);
+        padding-top: 10vmax;
+        flex-wrap: wrap;
+    }
+    .card:nth-child(1) {
+        border-radius: 5px 5px 0 0;
+    }
+    .card:nth-child(3) {
+        border-radius: 0 0 5px 5px;
+    }
+    .attribution {
+        display: block;
+        position: unset;
+        transform: none;
+    }
+}
