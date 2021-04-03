@@ -118,7 +118,7 @@ For the canvas elements, I used [Instant Eyedropper](http://instant-eyedropper.c
 
 ## Author
 
-I am a self-taught full stack developer, clinical researcher, and a doctor. I hope to use all this knowledge in improving the lifestyle of humans 
+I am a self-taught full stack developer!
 
 <!-- - Website - [CNSPLIT](https://cnsplit.com/) -->
 - Frontend Mentor - [@HJassar](https://www.frontendmentor.io/profile/HJassar)
